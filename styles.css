@@ -1,0 +1,234 @@
+:root {
+  --primary-color-rgb: 141, 22, 22; /* Red */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+  text-align: center;
+  font-family: "Albert Sans", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.hero {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: gray;
+  background-image: url("images/hero-bg.png");
+  background-size: cover;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.hero-text {
+  margin: 0 24px;
+}
+
+.hero-asterik {
+  width: 35px;
+  height: 35px;
+  animation: asterikAnim 7s linear infinite;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 26px;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+@keyframes asterikAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* BOOK LIST & ITEMS */
+
+.fragments {
+  max-width: 480px;
+  margin: auto;
+}
+
+.img-container {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img-container > div {
+  width: 100vw;
+  height: 80vh;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-container .text-content {
+  margin: 0;
+  position: absolute;
+  display: inline-block;
+  width: 100vw;
+  height: 75vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+.img-container h2 {
+  height: calc(50vh - 32px);
+  color: white;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-style: italic;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 600px;
+}
+
+/* CREDITS */
+
+.credits {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.credits hr {
+  width: 60%;
+  border: 0;
+  border-top: 1px solid #444;
+  margin-bottom: 30px;
+}
+
+.credit-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 16px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.credit-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.coordinator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.coordinator .muted {
+  color: #bbb;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.coordinator img,
+.credit-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.coordinator p,
+.credit-user p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.credit-user p {
+  text-align: center;
+}
+
+.footer {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-color: #f5f5f5;
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-image: url("images/hero-bg.png");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.footer .thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.footer img {
+  width: 240px;
+  mix-blend-mode: multiply;
+}
+
+.footer .autor {
+  font-size: 14px;
+  color: #444;
+  background-color: #acacac;
+  width: 100vw;
+  padding: 12px;
+}
