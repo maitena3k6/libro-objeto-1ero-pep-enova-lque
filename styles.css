@@ -84,6 +84,26 @@ body {
   position: relative;
 }
 
+.img-container.v2 .text-content {
+  height: 100vh;
+  justify-content: center;
+}
+
+.img-container.v2.i1 {
+  background-color: #E81416;
+  background-image: url("images/deco_co.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.img-container.v2.i2 {
+  background-image: url("images/deco_bw.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .img-container > div {
   width: 100vw;
   height: 80vh;
@@ -150,7 +170,7 @@ body {
 
 .credit-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap: 16px;
   padding: 30px 0;
